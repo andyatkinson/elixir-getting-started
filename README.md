@@ -34,6 +34,7 @@ Linked list, head and tail of list
 list = [1,2,3]
 hd(list)
 tl(list)
+```
 
 [11, 12, 13] will print as "char list", '\v\f\r', single quotes are char lists, double quotes are strings.
 
@@ -55,6 +56,7 @@ Has double equals and triple equals. 1 == 1.0 #=> true vs. 1 === 1.0 #=> false
 1 < :atom works because datatypes have a sort order, and so sorting algorithms don't have to worry about types.
 
 The match operator (`=`)
+
 ```
 x=1
 1=x

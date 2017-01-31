@@ -72,3 +72,70 @@ Pattern matching on tuples. Count and type needs to match.
 Use pin operator when you want to match against existing variable's value rather than rebinding the variable.
 
 e.g. ^x when you want to preserve current value
+
+`cond` is similar to if else statements in other languages
+
+```
+cond do
+  condition ->
+  condition ->
+
+end
+```
+
+if and unless
+
+"keyword list" syntax style
+
+`if true, do: 1 + 2`
+
+### Binaries, strings, and char lists
+
+Get a character's code point by using `?char` e.g. `?a` in iex
+
+Define a binary like this: `<<1,2,3>>`. A binary is a sequence of bytes.
+A char list is a list of code points.
+
+##### Keyword lists and maps
+
+When we have a 2-item tuples, and first item is an atom, we call it a "keyword list", e.g.
+
+`list = [{:a, 1}, {:b, 2}]`
+
+* keys must be atoms
+* keys are ordered, as specified by developer
+* keys can be given more than once
+
+Maps
+
+ * allow any value as a key
+ * maps keys do not follow any ordering
+
+e.g. `%{:a => 1, 2 => :b}
+
+When a map is used in a pattern, it will always match on a subset of the given value.
+
+`put_in/2` and `update_in/2` macros, `get_and_update_in/2` (extract value and update data)
+
+##### Modules
+
+```
+defmodule Math do
+  def sum(a, b) do
+    a + b
+  end
+end
+```
+
+Math.sum(1,2)
+
+##### Function capturing
+
+Retrieve functions as a function using the name/arity style
+
+Capture syntax can be used as shorthand for creating functions.
+e.g. `fun = &(&1 + 1)`
+
+&1 represents first argument
+
+Default arguments are supported. Weird thing about function without body, when there are multiple clauses.

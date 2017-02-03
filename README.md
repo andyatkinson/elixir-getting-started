@@ -167,3 +167,34 @@ Enum.take(stream, 10)
 ```
 
 Stream.resource/3
+
+##### Processes
+
+Not OS processes. Not like threads. They are lightweight in terms of memory and CPU. Can have 10s or even 100s of thousands of processes running simultaneously.
+
+`iex> pid = spawn fn -> 1 + 2 end`
+
+`Process.alive?(pid)`
+
+Send and receive messages between processes, send/2 and receive/1
+
+##### Links
+
+Process.link/1
+
+spawn/1 and spawn_link/1 We link our processes to supervisors, which restart processes. Processes are isolated.
+
+##### Tasks
+
+Task.start/1
+Task.start_link/1
+
+Use Task to get better error reports
+
+##### State
+
+Using processes to maintain state and name registration are very common patterns
+
+Elixir provides an abstraction layer called an "Agent" around state
+
+`GenServer` for building generic servers

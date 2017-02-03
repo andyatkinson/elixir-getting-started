@@ -139,3 +139,8 @@ e.g. `fun = &(&1 + 1)`
 &1 represents first argument
 
 Default arguments are supported. Weird thing about function without body, when there are multiple clauses.
+
+##### Recursion
+
+Loops are different in a functional language compared with an imperative language
+A function may have multiple clauses. The function matches that matches the args passed to it.

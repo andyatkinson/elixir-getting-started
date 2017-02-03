@@ -144,3 +144,26 @@ Default arguments are supported. Weird thing about function without body, when t
 
 Loops are different in a functional language compared with an imperative language
 A function may have multiple clauses. The function matches that matches the args passed to it.
+
+##### Ranges
+
+Ranges are supported, e.g. `1..3`
+
+Functions in the Enum module are "eager", each operation generates an intermiedate list until we reach the result.
+
+`|>` pipe operator
+
+`1..10_000 |> Enum.map(&(&1 * 3)) |> Enum.sum`
+
+##### Streams
+
+Streams support lazy operations. "Streams are lazy composable enumerables". Does not generate intermediate list. Invoked when we pass the underlying stream to the Enum module.
+
+For large, or possible infinite collections.
+
+```
+stream = Stream.cycle([1,2,3])
+Enum.take(stream, 10)
+```
+
+Stream.resource/3

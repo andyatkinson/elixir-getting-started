@@ -198,3 +198,35 @@ Using processes to maintain state and name registration are very common patterns
 Elixir provides an abstraction layer called an "Agent" around state
 
 `GenServer` for building generic servers
+
+##### File I/O
+
+`File` module
+
+File.read/1, vs. File.read!/1 (latter returns contents of file instead of tuple, raises an error)
+Without bang is preferred when handling different outcomes
+
+```
+case File.read(file) do
+  {:ok, body}      -> # do something with the `body`
+  {:error, reason} -> # handle the error caused by `reason`
+end
+```
+
+Bang variation is good for handing errors
+
+Processes and group leaders
+
+Writing to stdio, actually sending message to group leader
+`Process.group_leader`
+
+iodata and chardata
+
+alias, require and import ("directives", because they have lexical scope) Lexical scope means it may only be executed within the block where it is defined.
+
+```
+iex> import List, only: [duplicate: 2]
+List
+```
+
+Module nesting

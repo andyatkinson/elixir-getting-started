@@ -230,3 +230,39 @@ List
 ```
 
 Module nesting
+Module attributes
+
+  1. annotate the module
+  2. hey work as constants
+  3. hey work as temporary module storage to be used during compilation
+
+
+@moduledoc
+
+Module attributes as constants, e.g. initial state
+
+```
+defmodule MyServer do
+  @initial_state %{host: "147.0.0.1", port: 3456}
+  IO.inspect @initial_state
+end
+```
+
+As temporary storage (module attribute values read at compilation time not runtime)
+
+##### Structs
+
+```
+defmodule User do
+  defstruct name: "John", age: 25
+end
+
+%User{}
+%User{age: 25, name: "Bill"}
+john=%User{age: 25}
+bill=%User{john | age: 30}
+```
+
+Structs are bare maps underneath
+
+@enforce_keys to enforce certain keys are set

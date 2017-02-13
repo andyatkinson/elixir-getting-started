@@ -266,3 +266,21 @@ bill=%User{john | age: 30}
 Structs are bare maps underneath
 
 @enforce_keys to enforce certain keys are set
+
+##### Protocols
+
+Mechanism to achieve polymorphism
+
+`defprotocol` and `defimpl`
+
+Deriving, use implementation for `Any`
+
+e.g. Derive the Size protocol, using the Any implementation
+@derize [Size]
+
+@fallback_to_any true
+
+##### Built-in protocols
+
+Enum, String.Chars (to_string), Inspect
+Protocol consolidation

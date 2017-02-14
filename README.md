@@ -284,3 +284,31 @@ e.g. Derive the Size protocol, using the Any implementation
 
 Enum, String.Chars (to_string), Inspect
 Protocol consolidation
+
+##### Comprehensions
+
+* loop, filter, map into another list
+* three parts: generators, filters, collectables
+
+Pattern matching on the generator (left hand) side
+Only pick up the "good" values
+
+```
+iex> values = [good: 1, good: 2, bad: 3, good: 4]
+iex> for {:good, n} <- values, do: n * n
+[1, 4, 16]
+```
+
+##### Sigils
+
+Working with textual representations
+
+`~r` create regular expressions
+
+`iex> h sigil_r`
+
+`~s` similar to creating double quoted strings, useful when string contains double quotes
+
+`~w` (word list) e.g. ~w(foo bar baz)
+
+Also support heredocs

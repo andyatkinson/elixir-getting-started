@@ -312,3 +312,35 @@ Working with textual representations
 `~w` (word list) e.g. ~w(foo bar baz)
 
 Also support heredocs
+
+##### try, catch, rescue
+
+try and `after`, after runs whether try was successful or not
+
+##### Types and specs
+
+Dynamically typed, though comes with typespecs, which:
+
+  * declare typed function signatures
+  * declare custom data types
+
+
+@type directive allows us to create our own type
+We can use this type in the typespec
+Can perform static code analysis using the type information
+
+##### Behaviours
+
+Kind of like an interface, a set of function signatures a module has to implement
+
+
+##### Erlang libraries
+
+Formatted text output, `:io.format/2`
+crypto module
+digraph (directed graphs) module
+Erlang Term Storage, `ets` and `dets`
+math module
+queue module, double-ended FIFO
+rand module
+zip and zlib

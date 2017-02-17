@@ -344,3 +344,21 @@ math module
 queue module, double-ended FIFO
 rand module
 zip and zlib
+
+##### First project
+
+`mix.exs` file has project configuration
+
+`mix compile`
+
+Test files are elixir script files (no compilation necessary)
+
+`mix test`
+
+Mix supports environments:
+
+```
+:dev, :test, :prod
+```
+
+`mix help`

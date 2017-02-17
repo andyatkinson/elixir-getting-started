@@ -135,6 +135,7 @@ Retrieve functions as a function using the name/arity style
 
 Capture syntax can be used as shorthand for creating functions.
 e.g. `fun = &(&1 + 1)`
+`&(&1+1)` is same as `fn x -> x + 1 end`
 
 &1 represents first argument
 
@@ -362,3 +363,19 @@ Mix supports environments:
 ```
 
 `mix help`
+
+##### Agent
+
+Can review processes section from getting started
+
+Elixir is immutable where nothing is shared by default. To provide state, two main options:
+
+  * Processes
+  * ETS (Erlang Term Storage)
+
+Agent (simple wrapper around state)
+GenServer (generic servers, "processes"), sync and async, code reloading
+GenEvent (generic event, "managers")
+Task - async units of computation, spawn process, retrieve results later
+
+All implemented on top of processes

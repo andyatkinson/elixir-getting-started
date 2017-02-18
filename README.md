@@ -379,3 +379,13 @@ GenEvent (generic event, "managers")
 Task - async units of computation, spawn process, retrieve results later
 
 All implemented on top of processes
+
+##### GenServer
+
+A genserver is implemented in two parts: the client API and the server callbacks
+
+Two types of calls for genserver: calls and casts
+
+Calls are synchronous, server must respond
+
+Casts are async

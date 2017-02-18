@@ -389,3 +389,7 @@ Two types of calls for genserver: calls and casts
 Calls are synchronous, server must respond
 
 Casts are async
+
+When should we use monitors, and when should we use links?
+
+Links are bi-directional (both sides crash). Monitor is uni-directional. Use monitors when you want to be informed of crashes, but not crash.

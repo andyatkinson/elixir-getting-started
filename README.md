@@ -401,3 +401,9 @@ Links are bi-directional (both sides crash). Monitor is uni-directional. Use mon
 `iex -S mix` vs. `iex -S mix run --no-start` to not start applications
 
 Mix makes a distinction between projects and applications
+
+Defines a new supervisor with a `:simple_one_for_one` strategy
+No workers are started during the supervisor initialization
+A new worker is started each time start_child/2 is started
+
+"Supervision trees" - supervisors that supervise other supervisors

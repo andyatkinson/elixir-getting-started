@@ -409,3 +409,14 @@ A new worker is started each time start_child/2 is started
 "Supervision trees" - supervisors that supervise other supervisors
 
 Start processes inside supervision trees so they are introspectable. Can use tools like Observer to introspect on them.
+
+##### ETS
+
+Erlang term storage - can be used as a cache
+Don't use prematurely
+
+call is sync
+cast is async
+
+Questions: is there a debugger?
+How to do basic logging?

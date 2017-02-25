@@ -420,3 +420,13 @@ cast is async
 
 Questions: is there a debugger?
 How to do basic logging?
+
+##### Dependencies
+
+We use the Hex package manager
+Plug is an HTTP API
+
+Mix generates a Mix.lock file for repeatable builds
+`mix deps.get`
+
+For internal dependencies, can either use a git repo, or umbrella project.

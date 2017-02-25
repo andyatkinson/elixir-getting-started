@@ -1,0 +1,2 @@
+%{"mime": {:hex, :mime, "1.1.0", "01c1d6f4083d8aa5c7b8c246ade95139620ef8effb009edde934e0ec3b28090a", [:mix], []},
+  "plug": {:git, "git://github.com/elixir-lang/plug.git", "94148bfa75214c35fbca04d37928651ee13faf68", []}}

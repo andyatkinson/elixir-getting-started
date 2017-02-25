@@ -430,3 +430,16 @@ Mix generates a Mix.lock file for repeatable builds
 `mix deps.get`
 
 For internal dependencies, can either use a git repo, or umbrella project.
+
+##### TCP echo server
+
+1. listens to port until available, and holds a socket
+2. wait for client connection on that port and accepts it
+3. read the client request and write a response back
+
+First version, client connection (via telnet) and server crashes when telnet session ends
+Then we set up a Task to run the server again
+
+Next we need a Task supervisor so we can support multiple client connections
+
+One process is an acceptor that spawns other processes to serve requests

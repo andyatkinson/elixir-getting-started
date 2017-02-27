@@ -443,3 +443,7 @@ Then we set up a Task to run the server again
 Next we need a Task supervisor so we can support multiple client connections
 
 One process is an acceptor that spawns other processes to serve requests
+
+##### doctests
+
+Indent examples, have specific requirements

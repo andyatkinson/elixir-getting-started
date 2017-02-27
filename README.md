@@ -452,3 +452,5 @@ Run server with `mix run --no-halt`
 
 Use `with` to combine matching clauses
 https://hexdocs.pm/elixir/Kernel.SpecialForms.html#with/1
+
+:capture_log

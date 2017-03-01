@@ -454,3 +454,29 @@ Use `with` to combine matching clauses
 https://hexdocs.pm/elixir/Kernel.SpecialForms.html#with/1
 
 :capture_log
+
+##### Routing
+
+Routing table for distributed application
+
+e.g.
+
+```
+[{?a..?m, :"foo@computer-name"},
+ {?n..?z, :"bar@computer-name"}]
+```
+
+Nodes need `~/.erlang.cookie` and empd needs to be running
+
+Need to start the VM with a name
+
+iex --sname foo
+
+Can use `Node.spawn_link`
+Can use rpc: `:rpc.call(:"foo@Andrews-MacBook-Pro", Hello, :world, [])`
+Can use GenServer call
+Could use Tasks
+
+async/await - async run code, get result later on
+
+Distributed tasks

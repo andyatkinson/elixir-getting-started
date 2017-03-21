@@ -489,3 +489,14 @@ Run server
 localhost:4000
 
 
+##### Blog
+
+`mix phoenix.new blog`
+
+`mix ecto.migrate`
+
+`mix phoenix.server`
+
+`mix phoenix.routes`
+
+`iex -S mix phoenix.server` and navigate to `/posts`
